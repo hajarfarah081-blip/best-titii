@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Titi 💗</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8e1e7, #fcefee);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* القلب */
+.heart {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  background: #ff6f91;
+  transform: rotate(-45deg);
+  animation: beat 1.5s infinite;
+  margin-top: 40px;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background: #ff6f91;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -65px;
+  left: 0;
+}
+
+.heart::after {
+  left: 65px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%,100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.08); }
+}
+
+/* النص */
+.title {
+  position: absolute;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  transform: rotate(45deg);
+  width: 130px;
+  margin-top: 10px;
+}
+
+/* الصورة */
+.photo {
+  margin-top: 80px;
+}
+
+.photo img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.4s;
+}
+
+.photo img:hover {
+  transform: scale(1.03);
+}
+
+.footer {
+  margin-top: 15px;
+  color: #b56576;
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div style="position:relative;">
+  <div class="heart"></div>
+  <div class="title">best titi</div>
+</div>
+
+<div class="photo">
+  <img src="photo.jpg" alt="Best Titi">
+</div>
+
+<div class="footer">
+  Made with love 💕
+</div>
+
+</body>
+</html>
